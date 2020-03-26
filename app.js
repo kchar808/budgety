@@ -16,11 +16,24 @@ var UIController = (function() {
 })();
 
 var controller = (function(budgetCtrl, UICtrl) {
-  var z = budgetCtrl.publicTest(5);
+  var ctrlAddItem = function() {
+    // 1. Get the field input data
 
-  return {
-    anotherPublic: function() {
-      console.log(z);
-    }
+    // 2. Add the item to the budget controller
+
+    // 3. Add the item to the UI
+
+    // 4. Calculate the budget
+
+    // 5. Display the budget
+    console.log('It works');
   };
+
+  document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13 || event.which === 13) {
+      ctrlAddItem();
+    };
+  });
 })(budgetController, UIController);
